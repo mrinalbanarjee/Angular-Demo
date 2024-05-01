@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 
 const app = express();
 app.use(bodyParser.json());
-/* 
+/*
   IMPORTANT:
     ***NEVER*** store credentials unencrypted like this.
     This is for demo purposes only in order to simulate a functioning API serverr.
@@ -84,7 +84,7 @@ app.get("/api/products", (req, res) => {
       id: 16,
       description:
         "A single-wheeled base with an accelerometer capable of higher speeds and navigating rougher terrain than the two-wheeled variety.",
-      name: "Single Wheeled Base",
+      name: "A new robot part",
       imageName: "base-single-wheel.png",
       category: "Bases",
       price: 1190.5,
@@ -233,8 +233,8 @@ app.post("/api/register", (req, res) =>
 
 /* IMPORTANT:
     The code below is for demo purposes only and does not represent good security
-    practices. In a production application user credentials would be cryptographically 
-    stored in a database server and the password should NEVER be stored as plain text. 
+    practices. In a production application user credentials would be cryptographically
+    stored in a database server and the password should NEVER be stored as plain text.
 */
 app.post("/api/sign-in", (req, res) => {
   const user = users[req.body.email];
@@ -250,4 +250,4 @@ app.post("/api/sign-in", (req, res) => {
   }
 });
 
-app.listen(8081, () => console.log("API Server listening on port 8081!"));
+app.listen(8082, () => console.log("API Server listening on port 8082!"));
